@@ -43,14 +43,16 @@ void loop() {
   //delay(1);
   if(analogRead(noteFPin) > touchThresh) note=NOTE_F4; 
   //Serial.print("F=");Serial.println(analogRead(noteFPin));
+  //delay(1);
   if(analogRead(noteGPin) > touchThresh) note=NOTE_G4; 
   //Serial.print("G=");Serial.println(analogRead(noteGPin));
+  //delay(1);
   if(analogRead(noteAPin) > touchThresh) note=NOTE_A4; 
   //Serial.print("A=");Serial.println(analogRead(noteFPin));
 
   if(note != 0){
     tone(soundOutPin, note);
-    delay(40);
+    delay(80);
     note=0;
   }
   else{
